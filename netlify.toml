@@ -1,0 +1,9 @@
+[build]
+  publish = "netlify-dist"
+  command = "node build-for-netlify.js"
+
+# Handle SPA routes - redirect all requests to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
